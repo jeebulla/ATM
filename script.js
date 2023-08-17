@@ -52,22 +52,46 @@ if (inputPin === userPin) {
         receipt = confirm("Would you like to take a receipt?");
         if (amount <= accountBalance) {
           if (receipt === true) {
-            alert(`Please take your cash ${amount} and receipt;
-          Your account balance: ${accountBalance - amount}`);
+            alert(`
+            You have transferred ₦${amount} to ${accountNum};
+            Here is your receipt.
+            Your account balance: ₦${accountBalance - amount}`);
           } else {
-            alert(`Please take your cash ${amount};
-          Your account balance: ${accountBalance - amount}`);
+            alert(`
+            You have transferred ₦${amount} to ${accountNum};
+            Your account balance: ₦${accountBalance - amount}`);
           }
         } else {
           alert("Insufficient fund");
         }
       } else if (bank === 2) {
-        let bankName = prompt(`Select destination bank...
+        let bankName = +prompt(`Select destination bank...
         1. First Bank
         2. GT Bank
-        3. Fidelity
+        3. Fidelity Bank
         4. UBA Bank
         5. Eco Bank`);
+        if (bankName === 1) {
+          bankName = "First Bank";
+        } else if (bankName === 2) {
+          bankName = "GT Bank";
+        } else if (bankName === 3) {
+          bankName = "Fidelity Bank";
+        } else if (bankName === 4) {
+          bankName = "UBA Bank";
+        } else if (bankName === 5) {
+          bankName = "Eco Bank";
+        } else {
+          alert("Invalid response");
+        }
+        let accNumber = prompt("Enter account number");
+        amount = +prompt("Enter amount");
+        if (amount <= accountBalance) {
+          alert(`
+            You have transferred ₦${amount} to ${bankName}
+            with account number ${accNumber};
+            Your account balance: ₦${accountBalance - amount}`);
+        }
       } else {
         alert("Invalid response");
       }
@@ -105,11 +129,13 @@ if (inputPin === userPin) {
             alert("Please wait while your transaction is processing...");
             receipt = confirm("Would you like to take a receipt?");
             if (receipt === true) {
-              alert(`Please take your cash ${toWithdraw} and receipt;
-            Your account balance: ${balance}`);
+              alert(`
+              Please take your cash ₦${toWithdraw} and receipt;
+              Your account balance: ₦${balance}`);
             } else {
-              alert(`Please take your cash ${toWithdraw};
-            Your account balance: ${balance}`);
+              alert(`
+              Please take your cash ₦${toWithdraw};
+              Your account balance: ₦${balance}`);
             }
           } else {
             alert("Insuffiecient Funds");
@@ -122,11 +148,13 @@ if (inputPin === userPin) {
             alert("Please wait while your transaction is processing...");
             receipt = confirm("Would you like to take a receipt?");
             if (receipt === true) {
-              alert(`Please take your cash ${toWithdraw} and receipt;
-          Your account balance: ${balance}`);
+              alert(`
+              Please take your cash ₦${toWithdraw} and receipt;
+              Your account balance: ₦${balance}`);
             } else {
-              alert(`Please take your cash ${toWithdraw};
-            Your account balance: ${balance}`);
+              alert(`
+              Please take your cash ₦${toWithdraw};
+              Your account balance: ₦${balance}`);
             }
           } else {
             alert("Insufficient Fund");
