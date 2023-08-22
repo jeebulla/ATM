@@ -4,22 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Automated Teller Machine</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Welcome to Access Bank</h1>
-    <p>
-      <strong>Note: You only need password to login. <br> Default password
-      is: 1234</strong>
-      <p>Account Balance is: <strong>₦10,000</strong></p>
-    </p>
-    <h2>Here's a list of what you can do on this page. Any other feature is stilll under development</h2>
-    <ul>
-      <li>Check balance</li>
-      <li>Change pin</li>
-      <li>Cash transfer</li>
-      <li>Cash Withdrawal</li>
-    </ul>
-
-    <script src="script.js"></script>
+    <main>
+      <div class="outer-body">
+        <div class="mid-body">
+          <div class="screen">
+            <div class="welcome src active">
+              <h3>Welcome to <br />Access Bank</h3>
+              <p>
+                <strong>Note: You need to enter a Username and password to login. <br>Default password
+                is: 1234</strong>
+                <p>Account Balance is: <strong>₦10,000</strong></p>
+              </p>
+              <h4>Here's a list of what you can do on this page. Any other feature is stilll under development</h4>
+              <ul>
+                <li>Check balance</li>
+                <li>Change pin</li>
+                <li>Cash transfer</li>
+                <li>Cash Withdrawal</li>
+              </ul>
+              <button class="next-page">Click and Insert your card</button>
+            </div>
+            <!-- <div class="login src">
+              <h3>Enter your password</h3>
+              <input type="text" name="password" id="password" />
+              <button class="next-page">Enter</button>
+            </div>
+            <div class="greet-user src">
+              <h3 class="greet">What do we have here?</h3>
+              <button class="next-page">Next</button>
+            </div> -->
+          </div>
+          <div class="card-slot">
+            <div class="card"></div>
+          </div>
+          <div class="receipt-slot"></div>
+        </div>
+      </div>
+    </main>
+   <script src="script.js"></script>
   </body>
 </html>
